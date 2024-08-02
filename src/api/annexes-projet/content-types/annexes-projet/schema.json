@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annexes_projets",
+  "info": {
+    "singularName": "annexes-projet",
+    "pluralName": "annexes-projets",
+    "displayName": "annexes_projet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "annexes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::annexe.annexe",
+      "mappedBy": "annexes_projet"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "annexes_projet"
+    }
+  }
+}

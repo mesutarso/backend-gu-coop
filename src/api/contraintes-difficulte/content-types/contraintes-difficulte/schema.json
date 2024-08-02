@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contraintes_difficultes",
+  "info": {
+    "singularName": "contraintes-difficulte",
+    "pluralName": "contraintes-difficultes",
+    "displayName": "contraintes_difficulte"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "contraintes_difficulte"
+    }
+  }
+}

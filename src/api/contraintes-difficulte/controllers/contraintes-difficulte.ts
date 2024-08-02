@@ -1,0 +1,7 @@
+/**
+ * contraintes-difficulte controller
+ */
+
+import { factories } from '@strapi/strapi'
+
+export default factories.createCoreController('api::contraintes-difficulte.contraintes-difficulte');

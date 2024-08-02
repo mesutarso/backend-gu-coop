@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "action_gestions",
+  "info": {
+    "singularName": "action-gestion",
+    "pluralName": "action-gestions",
+    "displayName": "action_gestion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recrutement_personnel": {
+      "type": "richtext"
+    },
+    "acquisition_equipement": {
+      "type": "richtext"
+    },
+    "accords_de_partenariats": {
+      "type": "richtext"
+    },
+    "etablissements_organes_directeurs_suivi": {
+      "type": "richtext"
+    },
+    "autres_actions_gestions": {
+      "type": "richtext"
+    },
+    "retards_changements": {
+      "type": "richtext"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "action_gestion"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "situation_financieres",
+  "info": {
+    "singularName": "situation-financiere",
+    "pluralName": "situation-financieres",
+    "displayName": "situation_financiere"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "montant_total": {
+      "type": "decimal"
+    },
+    "fond_recus": {
+      "type": "decimal"
+    },
+    "fond_utilises": {
+      "type": "decimal"
+    },
+    "cofinancement": {
+      "type": "decimal"
+    },
+    "commentaires": {
+      "type": "richtext"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "situation_financiere"
+    }
+  }
+}

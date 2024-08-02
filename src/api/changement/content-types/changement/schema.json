@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "changements",
+  "info": {
+    "singularName": "changement",
+    "pluralName": "changements",
+    "displayName": "changement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "changements_significatifs": {
+      "type": "richtext"
+    },
+    "raisons_changements": {
+      "type": "richtext"
+    },
+    "extension_projet_accepte": {
+      "type": "boolean"
+    },
+    "justification_extention": {
+      "type": "richtext"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "changement"
+    }
+  }
+}

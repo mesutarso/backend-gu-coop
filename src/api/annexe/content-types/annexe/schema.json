@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annexes",
+  "info": {
+    "singularName": "annexe",
+    "pluralName": "annexes",
+    "displayName": "annexe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "integer"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "fichier": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "produit": {
+      "type": "string"
+    },
+    "annexes_projet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::annexes-projet.annexes-projet",
+      "inversedBy": "annexes"
+    }
+  }
+}

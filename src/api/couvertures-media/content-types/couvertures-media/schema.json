@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "couvertures_medias",
+  "info": {
+    "singularName": "couvertures-media",
+    "pluralName": "couvertures-medias",
+    "displayName": "couvertures_media"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "couvertures": {
+      "type": "json"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "couvertures_media"
+    }
+  }
+}

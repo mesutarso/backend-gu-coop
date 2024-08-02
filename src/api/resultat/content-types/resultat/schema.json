@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resultats",
+  "info": {
+    "singularName": "resultat",
+    "pluralName": "resultats",
+    "displayName": "resultat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type_rapport": {
+      "type": "enumeration",
+      "enum": [
+        "mi-parcours",
+        "final"
+      ]
+    },
+    "resultats": {
+      "type": "json"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "resultat"
+    }
+  }
+}

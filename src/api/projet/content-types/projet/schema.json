@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projets",
+  "info": {
+    "singularName": "projet",
+    "pluralName": "projets",
+    "displayName": "projet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "numero": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "date_debut": {
+      "type": "date"
+    },
+    "date_fin": {
+      "type": "date"
+    },
+    "prolonge": {
+      "type": "boolean"
+    },
+    "agence_mise_en_oeuvre": {
+      "type": "string"
+    },
+    "groupes_cibles_beneficiaires": {
+      "type": "json"
+    },
+    "partenaires": {
+      "type": "json"
+    },
+    "rapports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rapport.rapport",
+      "mappedBy": "projet"
+    },
+    "lieu_mise_en_oeuvre": {
+      "type": "enumeration",
+      "enum": [
+        "national",
+        "provincial",
+        "territorial"
+      ]
+    },
+    "provinces": {
+      "type": "json"
+    },
+    "territoires": {
+      "type": "json"
+    }
+  }
+}

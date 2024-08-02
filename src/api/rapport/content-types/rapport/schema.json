@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rapports",
+  "info": {
+    "singularName": "rapport",
+    "pluralName": "rapports",
+    "displayName": "rapport"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mi_parcours",
+        "final"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "projet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::projet.projet",
+      "inversedBy": "rapports"
+    },
+    "situation_financiere": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::situation-financiere.situation-financiere",
+      "mappedBy": "rapport"
+    },
+    "action_gestion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::action-gestion.action-gestion",
+      "mappedBy": "rapport"
+    },
+    "reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reference.reference",
+      "mappedBy": "rapport"
+    },
+    "activites_et_produit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activites-et-produit.activites-et-produit",
+      "mappedBy": "rapport"
+    },
+    "resultat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::resultat.resultat",
+      "mappedBy": "rapport"
+    },
+    "changement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::changement.changement",
+      "mappedBy": "rapport"
+    },
+    "contraintes_difficulte": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contraintes-difficulte.contraintes-difficulte",
+      "mappedBy": "rapport"
+    },
+    "success_accomplissement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::success-accomplissement.success-accomplissement",
+      "mappedBy": "rapport"
+    },
+    "couvertures_media": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::couvertures-media.couvertures-media",
+      "mappedBy": "rapport"
+    },
+    "histoire": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::histoire.histoire",
+      "mappedBy": "rapport"
+    },
+    "remarque": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::remarque.remarque",
+      "mappedBy": "rapport"
+    },
+    "annexes_projet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::annexes-projet.annexes-projet",
+      "mappedBy": "rapport"
+    },
+    "signature": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::signature.signature",
+      "mappedBy": "rapport"
+    }
+  }
+}

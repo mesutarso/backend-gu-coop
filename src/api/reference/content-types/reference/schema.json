@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "references",
+  "info": {
+    "singularName": "reference",
+    "pluralName": "references",
+    "displayName": "reference"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "donnees": {
+      "type": "json"
+    },
+    "methodes": {
+      "type": "richtext"
+    },
+    "rapport": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rapport.rapport",
+      "inversedBy": "reference"
+    }
+  }
+}
