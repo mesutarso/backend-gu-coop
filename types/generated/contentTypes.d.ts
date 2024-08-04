@@ -864,66 +864,24 @@ export interface ApiActivitesEtProduitActivitesEtProduit
   };
 }
 
-export interface ApiAnnexeAnnexe extends Schema.CollectionType {
-  collectionName: 'annexes';
-  info: {
-    singularName: 'annexe';
-    pluralName: 'annexes';
-    displayName: 'annexe';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    numero: Attribute.Integer;
-    titre: Attribute.String;
-    type: Attribute.String;
-    fichier: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    produit: Attribute.String;
-    annexes_projet: Attribute.Relation<
-      'api::annexe.annexe',
-      'manyToOne',
-      'api::annexes-projet.annexes-projet'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::annexe.annexe',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::annexe.annexe',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiAnnexesProjetAnnexesProjet extends Schema.CollectionType {
   collectionName: 'annexes_projets';
   info: {
     singularName: 'annexes-projet';
     pluralName: 'annexes-projets';
     displayName: 'annexes_projet';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    annexes: Attribute.Relation<
-      'api::annexes-projet.annexes-projet',
-      'oneToMany',
-      'api::annexe.annexe'
-    >;
     rapport: Attribute.Relation<
       'api::annexes-projet.annexes-projet',
       'oneToOne',
       'api::rapport.rapport'
     >;
+    annexes: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1480,7 +1438,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::action-gestion.action-gestion': ApiActionGestionActionGestion;
       'api::activites-et-produit.activites-et-produit': ApiActivitesEtProduitActivitesEtProduit;
-      'api::annexe.annexe': ApiAnnexeAnnexe;
       'api::annexes-projet.annexes-projet': ApiAnnexesProjetAnnexesProjet;
       'api::changement.changement': ApiChangementChangement;
       'api::contraintes-difficulte.contraintes-difficulte': ApiContraintesDifficulteContraintesDifficulte;
